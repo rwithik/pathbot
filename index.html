@@ -9,7 +9,7 @@
 		height: 100vh;
 		width:100vw;
 		background-color: black;
-		font-family: 'Inconsolata', monospace;
+		font-family: 'Source Code Pro', monospace;
 	}
 
 	.div-container {
@@ -20,7 +20,6 @@
 
 	#description {
 		position: relative;
-		/*text-align: center;*/
 		height: 20vh;
 		width: 40vw;
 		left: 50%;
@@ -43,31 +42,31 @@
 	}
 
 	button {
+		cursor: pointer;
 		background-color: black;
 		color: white;
 		border: 1px solid white;
 		border-radius: 5px;
 		margin-left: 5px;
+		font-family: 'Source Code Pro', monospace;
+
 	}
 
 </style>
 
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
 	<title>Pathbot</title>
 </head>
 
 <body>
-
-	<!-- <div class="div-container"> -->
 		<div id="description">
-			Description!
+			<u>How to play the game</u>
+			<p>The description of the room will appear here. Press the corrosponding button, or a WASD key to move to the next room. </p>
 		</div>
 		<div id="directions">
-			Directions!	
+			<button id="start-button" onclick="start_app()">Start playing!</button>
 		</div>
-	<!-- </div> -->
-
 </body>
 
 <footer>
