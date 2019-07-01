@@ -4,6 +4,20 @@ let dirBox = document.getElementById('directions');
 let locationPath = '';
 let validExits = [];
 
+let directions = {
+	'W': 'West',
+	'E': 'East',
+	'N': 'North',
+	'S': 'South',
+};
+
+let reverseDirection = {
+	'North': 'N',
+	'South': 'S',
+	'West': 'W',
+	'East': 'E',
+};
+
 function generate_stuff(data){
 	descBox.innerHTML = "<u>Room Description</u><br><br><p>" + data.description + "</p>";
 	dirBox.innerHTML = "Which way do you want to go?<br><br>";
@@ -38,20 +52,6 @@ function start_app(){
 }
 
 function send_data_button() {
-	let directions = {
-		'W': 'West',
-		'E': 'East',
-		'N': 'North',
-		'S': 'South',
-	};
-	
-	let reverseDirection = {
-		'North': 'N',
-		'South': 'S',
-		'West': 'W',
-		'East': 'E',
-	};
-
 	buttonText = event.target.innerText;
 	console.log("Moving " + buttonText);
 	fetch_data(reverseDirection[buttonText]);
@@ -64,7 +64,7 @@ function send_data_keypress(key){
 		'd': 'E',
 		's': 'S',
 	};
-	
+
 	fetch_data(keyLegend[key]);
 }
 
